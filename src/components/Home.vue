@@ -51,6 +51,7 @@
                 the price, volume, median price and lowest price of a skin, and
                 make sure if it worth your money.
               </div>
+              <div class="projectTech">Javascript, Vue, Plain CSS</div>
             </div>
           </div>
         </div>
@@ -83,6 +84,7 @@ a {
 }
 
 .sideInfo {
+  position: sticky;
   width: 10%;
   display: flex;
   flex-direction: column;
@@ -126,7 +128,6 @@ a {
   width: 80%;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
   padding: 20px;
 }
 
@@ -165,7 +166,6 @@ a {
 .project {
   display: flex;
   flex-direction: column;
-  max-width: 85%;
 }
 
 .projectTop {
@@ -201,7 +201,7 @@ a {
 }
 
 .projectImage {
-  width: 500px;
+  width: 600px;
   border-radius: 4px;
   object-fit: cover;
   opacity: 0.9;
@@ -219,5 +219,9 @@ a {
   margin-left: -60px;
   padding: 20px;
   border-radius: 4px;
+}
+
+.projectTech {
+  font-family: "Fira Code", monospace;
 }
 </style>

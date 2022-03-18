@@ -58,7 +58,7 @@
               <div class="projectTech">Javascript, Vue, Plain CSS</div>
             </div>
           </div>
-          <div class="projectContent">
+          <div class="projectContentLeft">
             <div class="projectContentDetailsLeft">
               <span style="font-family: 'Fira Code', monospace; color: #62f9d6"
                 >Featured Project</span
@@ -178,7 +178,7 @@ a {
 }
 
 .allContent {
-  width: 70%;
+  max-width: 70%;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -209,6 +209,8 @@ a {
   font-size: 30px;
   font-weight: bold;
   transition: color 0.4s;
+  padding: 20px;
+  text-align: center;
 }
 
 .listTitle:hover {
@@ -248,8 +250,14 @@ a {
   margin-top: 80px;
 }
 
+.projectContentLeft {
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+}
+
 .projectImageContainer {
-  height: 98%;
+  height: fit-content;
   background: #5deccd;
   border-radius: 6px;
   transition: background 0.2s;
@@ -298,5 +306,79 @@ a {
 .projectTech {
   font-family: "Fira Code", monospace;
   padding: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  .sideInfoContent {
+    display: none;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .textTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .title {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .subTitle {
+    width: 100%;
+    font-size: 17px;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .projectContent {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 30px;
+  }
+
+  .projectContentLeft {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .projectImageContainer {
+    background-color: transparent;
+  }
+
+  .projectdescriptionLeft {
+    margin-right: 0;
+  }
+
+  .projectdescription {
+    margin-left: 0;
+  }
+
+  .projectContentDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projectContentDetailsLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1740px) {
+  .allContent {
+    max-width: 40%;
+  }
 }
 </style>

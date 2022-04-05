@@ -257,7 +257,7 @@ a {
 }
 
 .projectImageContainer {
-  height: 98%;
+  height: fit-content;
   background: #5deccd;
   border-radius: 6px;
   transition: background 0.2s;
@@ -269,6 +269,7 @@ a {
 
 .projectImage {
   width: 100%;
+  height: 100%;
   border-radius: 4px;
   object-fit: cover;
   opacity: 0.9;

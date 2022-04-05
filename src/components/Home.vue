@@ -257,7 +257,7 @@ a {
 }
 
 .projectImageContainer {
-  height: fit-content;
+  height: 98%;
   background: #5deccd;
   border-radius: 6px;
   transition: background 0.2s;
@@ -309,7 +309,7 @@ a {
 }
 
 @media screen and (max-width: 800px) {
-  .sideInfoContent {
+  .sideInfo {
     display: none;
   }
 
@@ -335,6 +335,8 @@ a {
     width: 100%;
     font-size: 17px;
     font-family: "Montserrat", sans-serif;
+    display: flex;
+    align-items: center;
   }
 
   .projectContent {

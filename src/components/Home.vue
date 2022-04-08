@@ -29,7 +29,8 @@
         <div class="textTop">
           <span class="title">NovaDrake</span>
           <p class="subTitle">
-            I'm a Front-end developer, here you can find some of my works.
+            My name is Nathan, and I'm a Front-end developer. Here you can find
+            some of my works.
           </p>
         </div>
       </div>

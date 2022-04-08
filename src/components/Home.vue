@@ -39,9 +39,18 @@
             <h1 class="projectTitle">Projects</h1>
             <div class="projectLine" />
           </div>
-          <div class="projectContent" style="margin-top: 20px">
+          <div
+            class="projectContent"
+            style="margin-top: 20px"
+            v-motion
+            :initial="{ opacity: 0, y: 100 }"
+            :enter="{ opacity: 1, y: 0, scale: 1 }"
+            :delay="200"
+          >
             <div class="projectImageContainer">
-              <img src="/novaskins.webp" alt="project" class="projectImage" />
+              <a href="https://novaskins.netlify.app" target="_blank">
+                <img src="/novaskins.webp" alt="project" class="projectImage"
+              /></a>
             </div>
             <div class="projectContentDetails">
               <span style="font-family: 'Fira Code', monospace; color: #62f9d6"
@@ -58,7 +67,19 @@
               <div class="projectTech">Javascript, Vue, Plain CSS</div>
             </div>
           </div>
-          <div class="projectContentLeft">
+          <div
+            class="projectContentLeft"
+            v-motion
+            :initial="{
+              opacity: 0,
+              x: -100,
+            }"
+            :visibleOnce="{
+              opacity: 1,
+              x: 0,
+            }"
+            :delay="200"
+          >
             <div class="projectContentDetailsLeft">
               <span style="font-family: 'Fira Code', monospace; color: #62f9d6"
                 >Featured Project</span
@@ -76,12 +97,28 @@
               </div>
             </div>
             <div class="projectImageContainer">
-              <img src="/library.webp" alt="project" class="projectImage" />
+              <a href="https://smartlibrary.netlify.app" target="_blank">
+                <img src="/library.webp" alt="project" class="projectImage"
+              /></a>
             </div>
           </div>
-          <div class="projectContent">
+          <div
+            class="projectContent"
+            v-motion
+            :initial="{
+              opacity: 0,
+              x: 200,
+            }"
+            :visibleOnce="{
+              opacity: 1,
+              x: 0,
+            }"
+            :delay="200"
+          >
             <div class="projectImageContainer">
-              <img src="/coruja.webp" alt="project" class="projectImage" />
+              <a href="https://www.donacoruja.org" target="_blank">
+                <img src="/coruja.webp" alt="project" class="projectImage" />
+              </a>
             </div>
             <div class="projectContentDetails">
               <span style="font-family: 'Fira Code', monospace; color: #62f9d6"
@@ -100,6 +137,16 @@
           </div>
         </div>
       </div>
+      <footer>
+        <span
+          >Built by
+          <a href="https://github.com/NovaDrake76" target="_blank">NovaDrake</a
+          >, designed by
+          <a href="https://github.com/bchiang7" target="_blank"
+            >Brittany Chiang</a
+          ></span
+        >
+      </footer>
     </div>
     <div class="sideInfo">
       <div class="sideInfoContent">
@@ -118,6 +165,19 @@
 a {
   color: #ccd6f6;
   text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer {
+  padding: 50px 0 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Fira Code", monospace;
+}
+
+a:hover {
+  color: #62f9d6;
 }
 
 .container {

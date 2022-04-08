@@ -73,7 +73,7 @@
             v-motion
             :initial="{
               opacity: 0,
-              x: -100,
+              x: -20,
             }"
             :visibleOnce="{
               opacity: 1,
@@ -108,7 +108,7 @@
             v-motion
             :initial="{
               opacity: 0,
-              x: 200,
+              x: 20,
             }"
             :visibleOnce="{
               opacity: 1,
@@ -139,7 +139,7 @@
         </div>
       </div>
       <footer>
-        <span
+        <span style="text-align: center"
           >Built by
           <a href="https://github.com/NovaDrake76" target="_blank">NovaDrake</a
           >, designed by
@@ -372,6 +372,7 @@ a:hover {
 
 @media screen and (max-width: 800px) {
   .container {
+    width: 100%;
     margin: 0;
   }
   .allContent {
@@ -405,6 +406,7 @@ a:hover {
     font-family: "Montserrat", sans-serif;
     display: flex;
     align-items: center;
+    text-align: center;
   }
 
   .projectContent {

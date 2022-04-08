@@ -370,6 +370,12 @@ a:hover {
 }
 
 @media screen and (max-width: 800px) {
+  .container {
+    margin: 0;
+  }
+  .allContent {
+    max-width: 90%;
+  }
   .sideInfo {
     display: none;
   }

@@ -185,6 +185,7 @@
             rel="noreferrer"
           >
             <img
+              class="skillImage"
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
               alt="bootstrap"
             />
@@ -196,6 +197,7 @@
             rel="noreferrer"
           >
             <img
+              class="skillImage"
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
               alt="css3"
             />
@@ -207,6 +209,7 @@
             rel="noreferrer"
           >
             <img
+              class="skillImage"
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
               alt="html5"
             />
@@ -218,6 +221,7 @@
             rel="noreferrer"
           >
             <img
+              class="skillImage"
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
               alt="javascript"
             />
@@ -229,6 +233,7 @@
             rel="noreferrer"
           >
             <img
+              class="skillImage"
               src="https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/materialize.svg"
               alt="materialize"
             />
@@ -240,6 +245,7 @@
             rel="noreferrer"
           >
             <img
+              class="skillImage"
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
               alt="mysql"
             />
@@ -251,6 +257,7 @@
             rel="noreferrer"
           >
             <img
+              class="skillImage"
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
               alt="php"
             />
@@ -262,6 +269,7 @@
             rel="noreferrer"
           >
             <img
+              class="skillImage"
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
               alt="react"
             />
@@ -273,6 +281,7 @@
             rel="noreferrer"
           >
             <img
+              class="skillImage"
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
               alt="sass"
             />
@@ -284,6 +293,7 @@
             rel="noreferrer"
           >
             <img
+              class="skillImage"
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg"
               alt="vuejs"
             />
@@ -647,9 +657,12 @@ a:hover {
   }
 
   .skillIcon {
+    padding: 10px;
+  }
+
+  .skillImage {
     width: 40px;
     height: 40px;
-    padding: 10px;
   }
 }
 

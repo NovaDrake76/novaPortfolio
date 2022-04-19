@@ -21,7 +21,17 @@
       </div>
     </div>
     <div class="allContent">
-      <div class="top">
+      <div
+        class="top"
+        v-motion
+        :initial="{
+          opacity: 0,
+        }"
+        :visibleOnce="{
+          opacity: 1,
+        }"
+        :delay="100"
+      >
         <img
           src="https://avatars.githubusercontent.com/u/65428910?v=4"
           alt="sinuca"
@@ -34,6 +44,7 @@
           </p>
         </div>
       </div>
+
       <div class="mid">
         <div class="project">
           <div class="projectTop">
@@ -138,6 +149,148 @@
           </div>
         </div>
       </div>
+      <div class="projectTop" style="margin-top: 20px">
+        <h1 class="projectTitle">Skills</h1>
+        <div class="projectLine" />
+      </div>
+      <div class="skills">
+        <img src="/benjamin.webp" alt="benjamin" />
+        <WordSphere
+          id="id_sphere_object"
+          ref="ref_sphere_object"
+          class="wordSphere"
+          :items_list="[
+            'Vue',
+            'React',
+            'Bootstrap',
+            'Materialize',
+            'MDB',
+            'SASS',
+            'CSS',
+            'HTML',
+            'MySQL',
+            'PHP',
+            'Javascript',
+            'Git',
+            'Salve',
+          ]"
+        />
+      </div>
+      <div class="mobileSkills">
+        <p>
+          <a
+            class="skillIcon"
+            href="https://getbootstrap.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
+              alt="bootstrap"
+            />
+          </a>
+          <a
+            class="skillIcon"
+            href="https://www.w3schools.com/css/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+              alt="css3"
+            />
+          </a>
+          <a
+            class="skillIcon"
+            href="https://www.w3.org/html/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+              alt="html5"
+            />
+          </a>
+          <a
+            class="skillIcon"
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+              alt="javascript"
+            />
+          </a>
+          <a
+            class="skillIcon"
+            href="https://materializecss.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/materialize.svg"
+              alt="materialize"
+            />
+          </a>
+          <a
+            class="skillIcon"
+            href="https://www.mysql.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+              alt="mysql"
+            />
+          </a>
+          <a
+            class="skillIcon"
+            href="https://www.php.net"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
+              alt="php"
+            />
+          </a>
+          <a
+            class="skillIcon"
+            href="https://reactjs.org/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+              alt="react"
+            />
+          </a>
+          <a
+            class="skillIcon"
+            href="https://sass-lang.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
+              alt="sass"
+            />
+          </a>
+          <a
+            class="skillIcon"
+            href="https://vuejs.org/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg"
+              alt="vuejs"
+            />
+          </a>
+        </p>
+      </div>
+
       <footer>
         <span style="text-align: center"
           >Built by
@@ -159,6 +312,32 @@
     </div>
   </div>
 </template>
+
+<script>
+import WordSphere from "wordsphere";
+
+export default {
+  components: {
+    WordSphere,
+  },
+
+  mounted() {
+    window.addEventListener("scroll", this.onScroll);
+  },
+  methods: {
+    onScroll(e) {
+      // if the sphere becomes visible
+      if (
+        document.getElementById("id_sphere_object").getBoundingClientRect()
+          .top <= window.innerHeight
+      ) {
+        this.$refs.ref_sphere_object.start_autonomous_move();
+        window.removeEventListener("scroll", this.onScroll);
+      }
+    },
+  },
+};
+</script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Montserrat&display=swap");
@@ -370,6 +549,16 @@ a:hover {
   padding: 15px;
 }
 
+.skills {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.mobileSkills {
+  display: none;
+}
+
 @media screen and (max-width: 800px) {
   .container {
     width: 100%;
@@ -445,6 +634,22 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .skills {
+    display: none;
+  }
+
+  .mobileSkills {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .skillIcon {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
   }
 }
 

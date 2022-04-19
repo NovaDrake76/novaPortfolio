@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "@vueuse/motion": "^2.0.0-beta.12",
-    "vue": "^3.2.31"
+    "vue": "^3.2.31",
+    "wordsphere": "^1.1.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.2.2",

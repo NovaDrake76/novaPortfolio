@@ -21,17 +21,7 @@
       </div>
     </div>
     <div class="allContent">
-      <div
-        class="top"
-        v-motion
-        :initial="{
-          opacity: 0,
-        }"
-        :visibleOnce="{
-          opacity: 1,
-        }"
-        :delay="100"
-      >
+      <div class="top">
         <img
           src="https://avatars.githubusercontent.com/u/65428910?v=4"
           alt="sinuca"

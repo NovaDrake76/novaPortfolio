@@ -29,8 +29,8 @@
         <div class="textTop">
           <span class="title">NovaDrake</span>
           <p class="subTitle">
-            My name is Nathan, I'm a Front-end developer. Here you can find some
-            of my works.
+            Thank you for visiting. My name is Nathan, I'm a Front-end
+            developer. Here you can find some of my works.
           </p>
         </div>
       </div>
@@ -167,126 +167,14 @@
         />
       </div>
       <div class="mobileSkills">
-        <p>
+        <p v-for="skill in skills" v-bind:key="skill.alt">
           <a
             class="skillIcon"
-            href="https://getbootstrap.com"
+            :href="skill.link"
             target="_blank"
             rel="noreferrer"
           >
-            <img
-              class="skillImage"
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
-              alt="bootstrap"
-            />
-          </a>
-          <a
-            class="skillIcon"
-            href="https://www.w3schools.com/css/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              class="skillImage"
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
-              alt="css3"
-            />
-          </a>
-          <a
-            class="skillIcon"
-            href="https://www.w3.org/html/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              class="skillImage"
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-              alt="html5"
-            />
-          </a>
-          <a
-            class="skillIcon"
-            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              class="skillImage"
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-              alt="javascript"
-            />
-          </a>
-          <a
-            class="skillIcon"
-            href="https://materializecss.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              class="skillImage"
-              src="https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/materialize.svg"
-              alt="materialize"
-            />
-          </a>
-          <a
-            class="skillIcon"
-            href="https://www.mysql.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              class="skillImage"
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
-              alt="mysql"
-            />
-          </a>
-          <a
-            class="skillIcon"
-            href="https://www.php.net"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              class="skillImage"
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
-              alt="php"
-            />
-          </a>
-          <a
-            class="skillIcon"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              class="skillImage"
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
-              alt="react"
-            />
-          </a>
-          <a
-            class="skillIcon"
-            href="https://sass-lang.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              class="skillImage"
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
-              alt="sass"
-            />
-          </a>
-          <a
-            class="skillIcon"
-            href="https://vuejs.org/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              class="skillImage"
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg"
-              alt="vuejs"
-            />
+            <img class="skillImage" :src="skill.image" :alt="skill.name" />
           </a>
         </p>
       </div>
@@ -323,6 +211,78 @@ export default {
 
   mounted() {
     window.addEventListener("scroll", this.onScroll);
+  },
+  data() {
+    return {
+      skills: [
+        {
+          link: "https://getbootstrap.com",
+          image:
+            "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg",
+          alt: "bootstrap",
+        },
+        {
+          link: "https://www.w3schools.com/css/",
+          image:
+            "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
+          alt: "css3",
+        },
+        {
+          link: "https://www.w3.org/html/",
+          image:
+            "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg",
+          alt: "html5",
+        },
+        {
+          link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+          image:
+            "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+          alt: "javascript",
+        },
+        {
+          link: "https://materializecss.com/",
+          image:
+            "https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/materialize.svg",
+          alt: "materialize",
+        },
+        {
+          link: "https://reactjs.org",
+          image:
+            "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+          alt: "react",
+        },
+        {
+          link: "https://vuejs.org/",
+          image:
+            "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg",
+          alt: "vue",
+        },
+        {
+          link: "https://sass-lang.com",
+          image:
+            "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg",
+          alt: "sass",
+        },
+        {
+          link: "https://tailwindcss.com/",
+          image:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+          alt: "tailwind",
+        },
+        {
+          link: "https://www.mysql.com/",
+          image:
+            "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
+          alt: "mysql",
+        },
+        {
+          link: "https://www.php.net",
+          image:
+            "https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg",
+          alt: "php",
+        },
+      ],
+    };
   },
   methods: {
     onScroll(e) {
@@ -644,6 +604,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   .skillIcon {

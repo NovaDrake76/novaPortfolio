@@ -175,7 +175,8 @@
             target="_blank"
             rel="noreferrer"
           >
-            <img class="skillImage" :src="skill.image" :alt="skill.name" />
+            <img class="skillImage" :src="skill.image" v-bind:alt="skill.alt" />
+            {{ skill.alt }}
           </a>
         </p>
       </div>
@@ -220,67 +221,67 @@ export default {
           link: "https://getbootstrap.com",
           image:
             "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg",
-          alt: "bootstrap",
+          alt: "Bootstrap",
         },
         {
           link: "https://www.w3schools.com/css/",
           image:
             "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
-          alt: "css3",
+          alt: "CSS3",
         },
         {
           link: "https://www.w3.org/html/",
           image:
             "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg",
-          alt: "html5",
+          alt: "HTML5",
         },
         {
           link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
           image:
             "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
-          alt: "javascript",
+          alt: "Javascript",
         },
         {
           link: "https://materializecss.com/",
           image:
             "https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/materialize.svg",
-          alt: "materialize",
+          alt: "Materialize",
         },
         {
           link: "https://reactjs.org",
           image:
             "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
-          alt: "react",
+          alt: "React",
         },
         {
           link: "https://vuejs.org/",
           image:
             "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg",
-          alt: "vue",
+          alt: "Vue",
         },
         {
           link: "https://sass-lang.com",
           image:
             "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg",
-          alt: "sass",
+          alt: "SASS",
         },
         {
           link: "https://tailwindcss.com/",
           image:
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
-          alt: "tailwind",
+          alt: "Tailwind",
         },
         {
           link: "https://www.mysql.com/",
           image:
             "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
-          alt: "mysql",
+          alt: "MySQL",
         },
         {
           link: "https://www.php.net",
           image:
             "https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg",
-          alt: "php",
+          alt: "PHP",
         },
       ],
     };
@@ -525,6 +526,10 @@ a:hover {
 
 .skillIcon {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .skillImage {

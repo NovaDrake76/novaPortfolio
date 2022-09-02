@@ -50,23 +50,25 @@
             :delay="200"
           >
             <div class="projectImageContainer">
-              <a href="https://novaskins.netlify.app" target="_blank">
-                <img src="/novaskins.webp" alt="project" class="projectImage"
+              <a href="https://smartlibrary.netlify.app" target="_blank">
+                <img src="/library.webp" alt="project" class="projectImage"
               /></a>
             </div>
             <div class="projectContentDetails">
               <span style="font-family: 'Fira Code', monospace; color: #62f9d6"
                 >Featured Project</span
               >
-              <a href="https://novaskins.netlify.app" target="_blank"
-                ><h1 class="listTitle">Novaskins</h1></a
+              <a href="https://smartlibrary.netlify.app" target="_blank">
+                <h1 class="listTitle">Project Smart Library</h1></a
               >
               <div class="projectdescription">
-                Track skins information directly from the CS:GO market. Verify
-                the price, volume, median price and lowest price of a skin, and
-                make sure if it worth your money.
+                A web application to assist the administration of school
+                libraries. Features such as study room reservation and computers
+                disponibility checkers can make life easier for the students.
               </div>
-              <div class="projectTech">Javascript, Vue, Plain CSS</div>
+              <div class="projectTech">
+                Typescript, React, Styled Components
+              </div>
             </div>
           </div>
           <div
@@ -86,21 +88,19 @@
               <span style="font-family: 'Fira Code', monospace; color: #62f9d6"
                 >Featured Project</span
               >
-              <a href="https://smartlibrary.netlify.app" target="_blank">
-                <h1 class="listTitle">Project Smart Library</h1></a
+              <a href="https://novaskins.netlify.app" target="_blank"
+                ><h1 class="listTitle">Novaskins</h1></a
               >
               <div class="projectdescriptionLeft">
-                A web application to assist the administration of school
-                libraries. Features such as study room reservation and computers
-                disponibility checkers can make life easier for the students.
+                Track skins information directly from the CS:GO market. Verify
+                the price, volume, median price and lowest price of a skin, and
+                make sure if it worth your money.
               </div>
-              <div class="projectTech">
-                Typescript, React, Styled Components
-              </div>
+              <div class="projectTech">Javascript, Vue, Plain CSS</div>
             </div>
             <div class="projectImageContainer">
-              <a href="https://smartlibrary.netlify.app" target="_blank">
-                <img src="/library.webp" alt="project" class="projectImage"
+              <a href="https://novaskins.netlify.app" target="_blank">
+                <img src="/novaskins.webp" alt="project" class="projectImage"
               /></a>
             </div>
           </div>
@@ -153,6 +153,7 @@
             'Vue',
             'React',
             'Bootstrap',
+            'Tailwind',
             'Materialize',
             'MDB',
             'SASS',
@@ -378,7 +379,7 @@ a:hover {
 }
 
 .allContent {
-  max-width: 70%;
+  max-width: 80%;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -516,7 +517,19 @@ a:hover {
 }
 
 .mobileSkills {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.skillIcon {
+  padding: 10px;
+}
+
+.skillImage {
+  width: 40px;
+  height: 40px;
 }
 
 @media screen and (max-width: 800px) {
@@ -599,27 +612,11 @@ a:hover {
   .skills {
     display: none;
   }
-
-  .mobileSkills {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-
-  .skillIcon {
-    padding: 10px;
-  }
-
-  .skillImage {
-    width: 40px;
-    height: 40px;
-  }
 }
 
 @media screen and (min-width: 1740px) {
   .allContent {
-    max-width: 40%;
+    max-width: 55%;
   }
 }
 </style>

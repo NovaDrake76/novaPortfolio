@@ -195,12 +195,7 @@
       </div>
       <div class="mobileSkills">
         <p v-for="skill in skills" v-bind:key="skill.alt">
-          <a
-            class="skillIcon"
-            :href="skill.link"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a class="skillIcon" :href="skill.link" target="_blank">
             <img class="skillImage" :src="skill.image" v-bind:alt="skill.alt" />
             {{ skill.alt }}
           </a>

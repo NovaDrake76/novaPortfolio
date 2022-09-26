@@ -14,9 +14,7 @@
         >
           <i class="sideIcon fa-brands fa-discord"></i
         ></a>
-        <a target="”_blank”" href="https://twitter.com/NovaDrake76">
-          <i class="sideIcon fa-brands fa-twitter"></i
-        ></a>
+
         <div class="sideLine" />
       </div>
     </div>
@@ -25,6 +23,7 @@
         <img
           src="https://avatars.githubusercontent.com/u/65428910?v=4"
           alt="sinuca"
+          class="avatar"
         />
         <div class="textTop">
           <span class="title">NovaDrake</span>
@@ -50,18 +49,40 @@
             :delay="200"
           >
             <div class="projectImageContainer">
-              <a href="https://smartlibrary.netlify.app" target="_blank">
-                <img src="/library.webp" alt="project" class="projectImage"
+              <a href="https://www.adinvestimentos.com.br" target="_blank">
+                <img src="/ad.webp" alt="project" class="projectImage"
               /></a>
             </div>
             <div class="projectContentDetails">
               <span style="font-family: 'Fira Code', monospace; color: #62f9d6"
                 >Featured Project</span
               >
+              <a href="https://www.adinvestimentos.com.br" target="_blank">
+                <h1 class="listTitle">AD Investimentos</h1></a
+              >
+              <div class="projectdescription">
+                Professional Investment Management - Office linked to Guide
+                Investimentos.
+              </div>
+              <div class="projectTech">React, Tailwind</div>
+            </div>
+          </div>
+          <div
+            class="projectContentLeft"
+            style="margin-top: 20px"
+            v-motion
+            :initial="{ opacity: 0, y: 100 }"
+            :enter="{ opacity: 1, y: 0, scale: 1 }"
+            :delay="200"
+          >
+            <div class="projectContentDetailsLeft">
+              <span style="font-family: 'Fira Code', monospace; color: #62f9d6"
+                >Featured Project</span
+              >
               <a href="https://smartlibrary.netlify.app" target="_blank">
                 <h1 class="listTitle">Project Smart Library</h1></a
               >
-              <div class="projectdescription">
+              <div class="projectdescriptionLeft">
                 A web application to assist the administration of school
                 libraries. Features such as study room reservation and computers
                 disponibility checkers can make life easier for the students.
@@ -70,9 +91,14 @@
                 Typescript, React, Styled Components
               </div>
             </div>
+            <div class="projectImageContainer">
+              <a href="https://smartlibrary.netlify.app" target="_blank">
+                <img src="/library.webp" alt="project" class="projectImage"
+              /></a>
+            </div>
           </div>
           <div
-            class="projectContentLeft"
+            class="projectContent"
             v-motion
             :initial="{
               opacity: 0,
@@ -84,28 +110,28 @@
             }"
             :delay="200"
           >
-            <div class="projectContentDetailsLeft">
+            <div class="projectImageContainer">
+              <a href="https://novaskins.netlify.app" target="_blank">
+                <img src="/novaskins.webp" alt="project" class="projectImage"
+              /></a>
+            </div>
+            <div class="projectContentDetails">
               <span style="font-family: 'Fira Code', monospace; color: #62f9d6"
                 >Featured Project</span
               >
               <a href="https://novaskins.netlify.app" target="_blank"
                 ><h1 class="listTitle">Novaskins</h1></a
               >
-              <div class="projectdescriptionLeft">
+              <div class="projectdescription">
                 Track skins information directly from the CS:GO market. Verify
                 the price, volume, median price and lowest price of a skin, and
                 make sure if it worth your money.
               </div>
               <div class="projectTech">Javascript, Vue, Plain CSS</div>
             </div>
-            <div class="projectImageContainer">
-              <a href="https://novaskins.netlify.app" target="_blank">
-                <img src="/novaskins.webp" alt="project" class="projectImage"
-              /></a>
-            </div>
           </div>
           <div
-            class="projectContent"
+            class="projectContentLeft"
             v-motion
             :initial="{
               opacity: 0,
@@ -117,24 +143,24 @@
             }"
             :delay="200"
           >
-            <div class="projectImageContainer">
-              <a href="https://www.donacoruja.org" target="_blank">
-                <img src="/coruja.webp" alt="project" class="projectImage" />
-              </a>
-            </div>
-            <div class="projectContentDetails">
+            <div class="projectContentDetailsLeft">
               <span style="font-family: 'Fira Code', monospace; color: #62f9d6"
                 >Featured Project</span
               >
               <a href="https://www.donacoruja.org" target="_blank">
                 <h1 class="listTitle">Campaign Dona Coruja</h1></a
               >
-              <div class="projectdescription">
+              <div class="projectdescriptionLeft">
                 The Campaign Dona Coruja helps children by giving them school
                 materials. Here, the campaign organizers can track information
                 such as how many children or schools will they help this year.
               </div>
               <div class="projectTech">PHP, Laravel, Bootstrap</div>
+            </div>
+            <div class="projectImageContainer">
+              <a href="https://www.donacoruja.org" target="_blank">
+                <img src="/coruja.webp" alt="project" class="projectImage" />
+              </a>
             </div>
           </div>
         </div>
@@ -204,7 +230,7 @@
 </template>
 
 <script>
-import WordSphere from "wordsphere";
+import WordSphere from "wordsphere"
 
 export default {
   components: {
@@ -212,7 +238,7 @@ export default {
   },
 
   mounted() {
-    window.addEventListener("scroll", this.onScroll);
+    window.addEventListener("scroll", this.onScroll)
   },
   data() {
     return {
@@ -284,7 +310,7 @@ export default {
           alt: "PHP",
         },
       ],
-    };
+    }
   },
   methods: {
     onScroll(e) {
@@ -293,12 +319,12 @@ export default {
         document.getElementById("id_sphere_object").getBoundingClientRect()
           .top <= window.innerHeight
       ) {
-        this.$refs.ref_sphere_object.start_autonomous_move();
-        window.removeEventListener("scroll", this.onScroll);
+        this.$refs.ref_sphere_object.start_autonomous_move()
+        window.removeEventListener("scroll", this.onScroll)
       }
     },
   },
-};
+}
 </script>
 
 <style>
@@ -419,6 +445,13 @@ a:hover {
   color: #5deccd;
 }
 
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
 .mid {
   margin-top: 20px;
   display: flex;
@@ -449,13 +482,13 @@ a:hover {
 .projectContent {
   display: flex;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 .projectContentLeft {
   display: flex;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 .projectImageContainer {

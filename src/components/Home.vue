@@ -31,6 +31,10 @@
             Thank you for visiting. My name is Nathan, I'm a Front-end
             developer. Here you can find some of my works.
           </p>
+          <p class="subTitle">
+            I'm focused on responsive design, CEO, code quality, etc, and I have
+            experience with Agile Scrum Methodology.
+          </p>
         </div>
       </div>
 
@@ -62,7 +66,7 @@
               >
               <div class="projectdescription">
                 Professional Investment Management - Office linked to Guide
-                Investimentos.
+                Investimentos. I made this site in less than 2 liters of coffee.
               </div>
               <div class="projectTech">React, Tailwind</div>
             </div>
@@ -80,9 +84,45 @@
                 >Featured Project</span
               >
               <a href="https://smartlibrary.netlify.app" target="_blank">
-                <h1 class="listTitle">Project Smart Library</h1></a
+                <h1 class="listTitle">Zenetpay</h1></a
               >
               <div class="projectdescriptionLeft">
+                Zenetpay is a Brazilian fintech company that provides digital
+                payment solutions for businesses. As part of the team, I was
+                responsible for the development of the Dashboard, working with
+                Frond - API communication, and the creation of new features.
+              </div>
+              <div class="projectTech">
+                Typescript, React, Material UI, UX, Python
+              </div>
+            </div>
+            <div class="projectImageContainer">
+              <a href="https://zenetpay.com" target="_blank">
+                <img src="/zenetpay.webp" alt="project" class="projectImage"
+              /></a>
+            </div>
+          </div>
+          <div
+            class="projectContent"
+            style="margin-top: 20px"
+            v-motion
+            :initial="{ opacity: 0, y: 100 }"
+            :enter="{ opacity: 1, y: 0, scale: 1 }"
+            :delay="200"
+          >
+            <div class="projectImageContainer">
+              <a href="https://smartlibrary.netlify.app" target="_blank">
+                <img src="/library.webp" alt="project" class="projectImage"
+              /></a>
+            </div>
+            <div class="projectContentDetails">
+              <span style="font-family: 'Fira Code', monospace; color: #62f9d6"
+                >Featured Project</span
+              >
+              <a href="https://smartlibrary.netlify.app" target="_blank">
+                <h1 class="listTitle">Project Smart Library</h1></a
+              >
+              <div class="projectdescription">
                 A web application to assist the administration of school
                 libraries. Features such as study room reservation and computers
                 disponibility checkers can make life easier for the students.
@@ -90,11 +130,6 @@
               <div class="projectTech">
                 Typescript, React, Styled Components
               </div>
-            </div>
-            <div class="projectImageContainer">
-              <a href="https://smartlibrary.netlify.app" target="_blank">
-                <img src="/library.webp" alt="project" class="projectImage"
-              /></a>
             </div>
           </div>
           <div
@@ -110,24 +145,25 @@
             }"
             :delay="200"
           >
-            <div class="projectImageContainer">
-              <a href="https://novaskins.netlify.app" target="_blank">
-                <img src="/novaskins.webp" alt="project" class="projectImage"
-              /></a>
-            </div>
-            <div class="projectContentDetails">
+            <div class="projectContentDetailsLeft">
               <span style="font-family: 'Fira Code', monospace; color: #62f9d6"
                 >Featured Project</span
               >
               <a href="https://novaskins.netlify.app" target="_blank"
                 ><h1 class="listTitle">Novaskins</h1></a
               >
-              <div class="projectdescription">
+              <div class="projectdescriptionLeft">
                 Track skins information directly from the CS:GO market. Verify
                 the price, volume, median price and lowest price of a skin, and
-                make sure if it worth your money.
+                make sure if it worth your money. - [Out because of Heroku
+                prices]
               </div>
               <div class="projectTech">Javascript, Vue, Plain CSS</div>
+            </div>
+            <div class="projectImageContainerLeft">
+              <a href="https://novaskins.netlify.app" target="_blank">
+                <img src="/novaskins.webp" alt="project" class="projectImage"
+              /></a>
             </div>
           </div>
           <div
@@ -143,24 +179,26 @@
             }"
             :delay="200"
           >
-            <div class="projectContentDetailsLeft">
+            <div class="projectImageContainer">
+              <a href="https://www.donacoruja.org" target="_blank">
+                <img src="/coruja.webp" alt="project" class="projectImage" />
+              </a>
+            </div>
+            <div class="projectContentDetails">
               <span style="font-family: 'Fira Code', monospace; color: #62f9d6"
                 >Featured Project</span
               >
               <a href="https://www.donacoruja.org" target="_blank">
                 <h1 class="listTitle">Campaign Dona Coruja</h1></a
               >
-              <div class="projectdescriptionLeft">
+
+              <div class="projectdescription">
                 The Campaign Dona Coruja helps children by giving them school
                 materials. Here, the campaign organizers can track information
-                such as how many children or schools will they help this year.
+                such as how many children or schools will they help this year. -
+                [Out because of Heroku prices]
               </div>
               <div class="projectTech">PHP, Laravel, Bootstrap</div>
-            </div>
-            <div class="projectImageContainer">
-              <a href="https://www.donacoruja.org" target="_blank">
-                <img src="/coruja.webp" alt="project" class="projectImage" />
-              </a>
             </div>
           </div>
         </div>
@@ -181,6 +219,7 @@
             'Bootstrap',
             'Tailwind',
             'Materialize',
+            'Material UI',
             'MDB',
             'SASS',
             'CSS',
@@ -190,6 +229,7 @@
             'Javascript',
             'Git',
             'Salve',
+            'Typescript',
           ]"
         />
       </div>
@@ -239,11 +279,18 @@ export default {
     return {
       skills: [
         {
-          link: "https://getbootstrap.com",
+          link: "https://reactjs.org",
           image:
-            "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg",
-          alt: "Bootstrap",
+            "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+          alt: "React",
         },
+        {
+          link: "https://vuejs.org/",
+          image:
+            "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg",
+          alt: "Vue",
+        },
+
         {
           link: "https://www.w3schools.com/css/",
           image:
@@ -263,23 +310,18 @@ export default {
           alt: "Javascript",
         },
         {
+          link: "https://getbootstrap.com",
+          image:
+            "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg",
+          alt: "Bootstrap",
+        },
+        {
           link: "https://materializecss.com/",
           image:
             "https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/materialize.svg",
           alt: "Materialize",
         },
-        {
-          link: "https://reactjs.org",
-          image:
-            "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
-          alt: "React",
-        },
-        {
-          link: "https://vuejs.org/",
-          image:
-            "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg",
-          alt: "Vue",
-        },
+
         {
           link: "https://sass-lang.com",
           image:
@@ -291,6 +333,12 @@ export default {
           image:
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
           alt: "Tailwind",
+        },
+        {
+          link: "https://mui.com/",
+          image:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-plain.svg",
+          alt: "Material UI",
         },
         {
           link: "https://www.mysql.com/",
@@ -426,6 +474,7 @@ a:hover {
   width: 60%;
   font-size: 17px;
   font-family: "Montserrat", sans-serif;
+  margin-top: 10px;
 }
 
 .listTitle {

@@ -32,7 +32,7 @@
             developer. Here you can find some of my works.
           </p>
           <p class="subTitle">
-            I'm focused on responsive design, CEO, code quality, etc, and I have
+            I'm focused on responsive design, SEO, code quality, etc, and I have
             experience with Agile Scrum Methodology.
           </p>
         </div>

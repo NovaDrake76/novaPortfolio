@@ -33,7 +33,7 @@
           </p>
           <p class="subTitle">
             I'm focused on responsive design, SEO, code quality, etc, and I have
-            experience with Agile Scrum Methodology.
+            plenty of experience with Agile Scrum Methodology.
           </p>
         </div>
       </div>
@@ -44,31 +44,39 @@
             <h1 class="projectTitle">Projects</h1>
             <div class="projectLine" />
           </div>
+
           <div
-            class="projectContent"
-            style="margin-top: 20px"
+            class="projectContentLeft"
             v-motion
-            :initial="{ opacity: 0, y: 100 }"
-            :enter="{ opacity: 1, y: 0, scale: 1 }"
+            :initial="{
+              opacity: 0,
+              x: 20,
+            }"
+            :visibleOnce="{
+              opacity: 1,
+              x: 0,
+            }"
             :delay="200"
           >
             <div class="projectImageContainer">
-              <a href="https://www.adinvestimentos.com.br" target="_blank">
-                <img src="/ad.webp" alt="project" class="projectImage"
-              /></a>
+              <a href="https://conthabilbr.com/" target="_blank">
+                <img src="/conha.webp" alt="project" class="projectImage" />
+              </a>
             </div>
             <div class="projectContentDetails">
               <span style="font-family: 'Fira Code', monospace; color: #62f9d6"
                 >Featured Project</span
               >
-              <a href="https://www.adinvestimentos.com.br" target="_blank">
-                <h1 class="listTitle">AD Investimentos</h1></a
+              <a href="https://conthabilbr.com/" target="_blank">
+                <h1 class="listTitle">Conthabil</h1></a
               >
+
               <div class="projectdescription">
-                Professional Investment Management - Office linked to Guide
-                Investimentos. I made this site in less than 2 liters of coffee.
+                Automate your accounting routines and do more with less. Leave
+                the repetitive and operational activities to our robot and focus
+                on what really matters.
               </div>
-              <div class="projectTech">React, Tailwind</div>
+              <div class="projectTech">React, Styled Components</div>
             </div>
           </div>
           <div
@@ -166,39 +174,32 @@
               /></a>
             </div>
           </div>
+
           <div
-            class="projectContentLeft"
+            class="projectContent"
+            style="margin-top: 20px"
             v-motion
-            :initial="{
-              opacity: 0,
-              x: 20,
-            }"
-            :visibleOnce="{
-              opacity: 1,
-              x: 0,
-            }"
+            :initial="{ opacity: 0, y: 100 }"
+            :enter="{ opacity: 1, y: 0, scale: 1 }"
             :delay="200"
           >
             <div class="projectImageContainer">
-              <a href="https://www.donacoruja.org" target="_blank">
-                <img src="/coruja.webp" alt="project" class="projectImage" />
-              </a>
+              <a href="https://www.adinvestimentos.com.br" target="_blank">
+                <img src="/ad.png" alt="project" class="projectImage"
+              /></a>
             </div>
             <div class="projectContentDetails">
               <span style="font-family: 'Fira Code', monospace; color: #62f9d6"
                 >Featured Project</span
               >
-              <a href="https://www.donacoruja.org" target="_blank">
-                <h1 class="listTitle">Campaign Dona Coruja</h1></a
+              <a href="https://www.adinvestimentos.com.br" target="_blank">
+                <h1 class="listTitle">AD Investimentos</h1></a
               >
-
               <div class="projectdescription">
-                The Campaign Dona Coruja helps children by giving them school
-                materials. Here, the campaign organizers can track information
-                such as how many children or schools will they help this year. -
-                [Out because of Heroku prices]
+                Professional Investment Management - Office linked to Guide
+                Investimentos.
               </div>
-              <div class="projectTech">PHP, Laravel, Bootstrap</div>
+              <div class="projectTech">React, Tailwind</div>
             </div>
           </div>
         </div>
@@ -265,7 +266,7 @@
 </template>
 
 <script>
-import WordSphere from "wordsphere"
+import WordSphere from "wordsphere";
 
 export default {
   components: {
@@ -273,7 +274,7 @@ export default {
   },
 
   mounted() {
-    window.addEventListener("scroll", this.onScroll)
+    window.addEventListener("scroll", this.onScroll);
   },
   data() {
     return {
@@ -353,7 +354,7 @@ export default {
           alt: "PHP",
         },
       ],
-    }
+    };
   },
   methods: {
     onScroll(e) {
@@ -362,12 +363,12 @@ export default {
         document.getElementById("id_sphere_object").getBoundingClientRect()
           .top <= window.innerHeight
       ) {
-        this.$refs.ref_sphere_object.start_autonomous_move()
-        window.removeEventListener("scroll", this.onScroll)
+        this.$refs.ref_sphere_object.start_autonomous_move();
+        window.removeEventListener("scroll", this.onScroll);
       }
     },
   },
-}
+};
 </script>
 
 <style>

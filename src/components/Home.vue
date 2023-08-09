@@ -3,28 +3,18 @@
     <div class="sideInfo">
       <div class="sideInfoContent">
         <a target="”_blank”" href="https://github.com/NovaDrake76">
-          <i class="sideIcon fa-brands fa-github"></i
-        ></a>
+          <i class="sideIcon fa-brands fa-github"></i></a>
         <a target="”_blank”" href="https://www.linkedin.com/in/nathan-marques/">
-          <i class="sideIcon fa-brands fa-linkedin"></i
-        ></a>
-        <a
-          target="”_blank”"
-          href="https://discord.com/channels/@me/830191630069137459"
-        >
-          <i class="sideIcon fa-brands fa-discord"></i
-        ></a>
+          <i class="sideIcon fa-brands fa-linkedin"></i></a>
+        <a target="”_blank”" href="https://discord.com/channels/@me/830191630069137459">
+          <i class="sideIcon fa-brands fa-discord"></i></a>
 
         <div class="sideLine" />
       </div>
     </div>
     <div class="allContent">
       <div class="top">
-        <img
-          src="https://avatars.githubusercontent.com/u/65428910?v=4"
-          alt="sinuca"
-          class="avatar"
-        />
+        <img src="https://avatars.githubusercontent.com/u/65428910?v=4" alt="sinuca" class="avatar" />
         <div class="textTop">
           <span class="title">NovaDrake</span>
           <p class="subTitle">
@@ -45,31 +35,23 @@
             <div class="projectLine" />
           </div>
 
-          <div
-            class="projectContentLeft"
-            v-motion
-            :initial="{
-              opacity: 0,
-              x: 20,
-            }"
-            :visibleOnce="{
-              opacity: 1,
-              x: 0,
-            }"
-            :delay="200"
-          >
+          <div class="projectContentLeft" v-motion :initial="{
+            opacity: 0,
+            x: 20,
+          }" :visibleOnce="{
+  opacity: 1,
+  x: 0,
+}" :delay="200">
             <div class="projectImageContainer">
               <a href="https://conthabilbr.com/" target="_blank">
                 <img src="/conha.webp" alt="project" class="projectImage" />
               </a>
             </div>
             <div class="projectContentDetails">
-              <span style="font-family: 'Fira Code', monospace; color: #62f9d6"
-                >Featured Project</span
-              >
+              <span style="font-family: 'Fira Code', monospace; color: #62f9d6">Featured Project</span>
               <a href="https://conthabilbr.com/" target="_blank">
-                <h1 class="listTitle">Conthabil</h1></a
-              >
+                <h1 class="listTitle">Conthabil</h1>
+              </a>
 
               <div class="projectdescription">
                 Automate your accounting routines and do more with less. Leave
@@ -79,21 +61,13 @@
               <div class="projectTech">React, Styled Components</div>
             </div>
           </div>
-          <div
-            class="projectContentLeft"
-            style="margin-top: 20px"
-            v-motion
-            :initial="{ opacity: 0, y: 100 }"
-            :enter="{ opacity: 1, y: 0, scale: 1 }"
-            :delay="200"
-          >
+          <div class="projectContentLeft" style="margin-top: 20px" v-motion :initial="{ opacity: 0, y: 100 }"
+            :enter="{ opacity: 1, y: 0, scale: 1 }" :delay="200">
             <div class="projectContentDetailsLeft">
-              <span style="font-family: 'Fira Code', monospace; color: #62f9d6"
-                >Featured Project</span
-              >
+              <span style="font-family: 'Fira Code', monospace; color: #62f9d6">Featured Project</span>
               <a href="https://smartlibrary.netlify.app" target="_blank">
-                <h1 class="listTitle">Zenetpay</h1></a
-              >
+                <h1 class="listTitle">Zenetpay</h1>
+              </a>
               <div class="projectdescriptionLeft">
                 Zenetpay is a Brazilian fintech company that provides digital
                 payment solutions for businesses. As part of the team, I was
@@ -106,30 +80,20 @@
             </div>
             <div class="projectImageContainer">
               <a href="https://zenetpay.com" target="_blank">
-                <img src="/zenetpay.webp" alt="project" class="projectImage"
-              /></a>
+                <img src="/zenetpay.webp" alt="project" class="projectImage" /></a>
             </div>
           </div>
-          <div
-            class="projectContent"
-            style="margin-top: 20px"
-            v-motion
-            :initial="{ opacity: 0, y: 100 }"
-            :enter="{ opacity: 1, y: 0, scale: 1 }"
-            :delay="200"
-          >
+          <div class="projectContent" style="margin-top: 20px" v-motion :initial="{ opacity: 0, y: 100 }"
+            :enter="{ opacity: 1, y: 0, scale: 1 }" :delay="200">
             <div class="projectImageContainer">
               <a href="https://smartlibrary.netlify.app" target="_blank">
-                <img src="/library.webp" alt="project" class="projectImage"
-              /></a>
+                <img src="/library.webp" alt="project" class="projectImage" /></a>
             </div>
             <div class="projectContentDetails">
-              <span style="font-family: 'Fira Code', monospace; color: #62f9d6"
-                >Featured Project</span
-              >
+              <span style="font-family: 'Fira Code', monospace; color: #62f9d6">Featured Project</span>
               <a href="https://smartlibrary.netlify.app" target="_blank">
-                <h1 class="listTitle">Project Smart Library</h1></a
-              >
+                <h1 class="listTitle">Project Smart Library</h1>
+              </a>
               <div class="projectdescription">
                 A web application to assist the administration of school
                 libraries. Features such as study room reservation and computers
@@ -140,26 +104,18 @@
               </div>
             </div>
           </div>
-          <div
-            class="projectContent"
-            v-motion
-            :initial="{
-              opacity: 0,
-              x: -20,
-            }"
-            :visibleOnce="{
-              opacity: 1,
-              x: 0,
-            }"
-            :delay="200"
-          >
+          <div class="projectContent" v-motion :initial="{
+            opacity: 0,
+            x: -20,
+          }" :visibleOnce="{
+  opacity: 1,
+  x: 0,
+}" :delay="200">
             <div class="projectContentDetailsLeft">
-              <span style="font-family: 'Fira Code', monospace; color: #62f9d6"
-                >Featured Project</span
-              >
-              <a href="https://novaskins.netlify.app" target="_blank"
-                ><h1 class="listTitle">Novaskins</h1></a
-              >
+              <span style="font-family: 'Fira Code', monospace; color: #62f9d6">Featured Project</span>
+              <a href="https://novaskins.netlify.app" target="_blank">
+                <h1 class="listTitle">Novaskins</h1>
+              </a>
               <div class="projectdescriptionLeft">
                 Track skins information directly from the CS:GO market. Verify
                 the price, volume, median price and lowest price of a skin, and
@@ -170,31 +126,21 @@
             </div>
             <div class="projectImageContainerLeft">
               <a href="https://novaskins.netlify.app" target="_blank">
-                <img src="/novaskins.webp" alt="project" class="projectImage"
-              /></a>
+                <img src="/novaskins.webp" alt="project" class="projectImage" /></a>
             </div>
           </div>
 
-          <div
-            class="projectContent"
-            style="margin-top: 20px"
-            v-motion
-            :initial="{ opacity: 0, y: 100 }"
-            :enter="{ opacity: 1, y: 0, scale: 1 }"
-            :delay="200"
-          >
+          <div class="projectContent" style="margin-top: 20px" v-motion :initial="{ opacity: 0, y: 100 }"
+            :enter="{ opacity: 1, y: 0, scale: 1 }" :delay="200">
             <div class="projectImageContainer">
-              <a href="https://www.adinvestimentos.com.br" target="_blank">
-                <img src="/ad.png" alt="project" class="projectImage"
-              /></a>
+              <a href="https://adinvestimentos.netlify.app/" target="_blank">
+                <img src="/ad.png" alt="project" class="projectImage" /></a>
             </div>
             <div class="projectContentDetails">
-              <span style="font-family: 'Fira Code', monospace; color: #62f9d6"
-                >Featured Project</span
-              >
-              <a href="https://www.adinvestimentos.com.br" target="_blank">
-                <h1 class="listTitle">AD Investimentos</h1></a
-              >
+              <span style="font-family: 'Fira Code', monospace; color: #62f9d6">Featured Project</span>
+              <a href="https://adinvestimentos.netlify.app/" target="_blank">
+                <h1 class="listTitle">AD Investimentos</h1>
+              </a>
               <div class="projectdescription">
                 Professional Investment Management - Office linked to Guide
                 Investimentos.
@@ -210,29 +156,24 @@
       </div>
       <div class="skills">
         <img src="/benjamin.webp" alt="benjamin" />
-        <WordSphere
-          id="id_sphere_object"
-          ref="ref_sphere_object"
-          class="wordSphere"
-          :items_list="[
-            'Vue',
-            'React',
-            'Bootstrap',
-            'Tailwind',
-            'Materialize',
-            'Material UI',
-            'MDB',
-            'SASS',
-            'CSS',
-            'HTML',
-            'MySQL',
-            'PHP',
-            'Javascript',
-            'Git',
-            'Salve',
-            'Typescript',
-          ]"
-        />
+        <WordSphere id="id_sphere_object" ref="ref_sphere_object" class="wordSphere" :items_list="[
+          'Vue',
+          'React',
+          'Bootstrap',
+          'Tailwind',
+          'Materialize',
+          'Material UI',
+          'MDB',
+          'SASS',
+          'CSS',
+          'HTML',
+          'MySQL',
+          'PHP',
+          'Javascript',
+          'Git',
+          'Salve',
+          'Typescript',
+        ]" />
       </div>
       <div class="mobileSkills">
         <p v-for="skill in skills" v-bind:key="skill.alt">
@@ -244,21 +185,14 @@
       </div>
 
       <footer>
-        <span style="text-align: center"
-          >Built by
-          <a href="https://github.com/NovaDrake76" target="_blank">NovaDrake</a
-          >, designed by
-          <a href="https://github.com/bchiang7" target="_blank"
-            >Brittany Chiang</a
-          ></span
-        >
+        <span style="text-align: center">Built by
+          <a href="https://github.com/NovaDrake76" target="_blank">NovaDrake</a>, designed by
+          <a href="https://github.com/bchiang7" target="_blank">Brittany Chiang</a></span>
       </footer>
     </div>
     <div class="sideInfo">
       <div class="sideInfoContent">
-        <a class="email" href="mailto:novadrake76@gmail.com"
-          >novadrake76@gmail.com</a
-        >
+        <a class="email" href="mailto:novadrake76@gmail.com">novadrake76@gmail.com</a>
         <div class="sideLine" />
       </div>
     </div>
@@ -620,9 +554,11 @@ a:hover {
     width: 100%;
     margin: 0;
   }
+
   .allContent {
     max-width: 90%;
   }
+
   .sideInfo {
     display: none;
   }

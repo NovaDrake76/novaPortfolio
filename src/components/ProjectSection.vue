@@ -96,6 +96,7 @@ a {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+    max-width: 1300px;
 }
 
 .projectTop {

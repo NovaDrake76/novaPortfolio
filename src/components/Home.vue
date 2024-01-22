@@ -33,7 +33,7 @@ export default {
           title: 'Conthabil',
           description: 'Automate your accounting routines and do more with less. Leave the repetitive and operational activities to our robot and focus on what really matters.',
           imageUrl: '/conha.webp',
-          link: 'https://conthabilbr.com/',
+          link: 'https://www.conthabilbr.com/',
           technologies: ['React', 'Styled Components']
         },
         {

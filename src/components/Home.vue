@@ -40,12 +40,28 @@ export default {
           id: 2,
           title: 'Zenetpay',
           description: 'Zenetpay is a Brazilian fintech company that provides digital payment solutions for businesses. As part of the team, I was responsible for the development of the Dashboard, working with Frond - API communication, and the creation of new features.',
-          imageUrl: '/zenetpay.webp',
+          imageUrl: '/zenet.webp',
           link: 'https://zenetpay.com',
           technologies: ['Typescript', 'React', 'Material UI', 'UX', 'Python']
         },
         {
-          id: 6,
+          id: 3,
+          title: 'KaniCasino',
+          description: "Kanicasino is a 4fun casino, no real money involved. You can open cases in a CSGO-like style, play roulette, coinflip, and more. I've been working on this project for months now, and it's my favorite one",
+          imageUrl: '/kanicasino.webp',
+          link: 'https://kanicasino.novadrake.com',
+          technologies: ['Node', 'Typescript', 'React', 'Tailwindcss', 'MongoDB']
+        },
+        {
+          id: 4,
+          title: 'E2Bank',
+          description: 'E2 Bank simplifies your finances with a free digital account, no-fee transactions, easy payments, and expense control. Enjoy 24/7 service, digital support, and a secure, fast app. I was responsible for the entire front-end development.',
+          imageUrl: '/e2bank.webp',
+          link: 'https://www.bancoe2.com.br/',
+          technologies: ['Typescript', 'React', 'Material UI']
+        },
+        {
+          id: 5,
           title: 'Campaing Dona Coruja',
           description: 'The goal of the campaing is to serve public school students, so that they can start the school year with decent school supplies. We hope that this way they will feel more stimulated in relation to their studies and will be able to contribute to a better future.',
           imageUrl: '/donacoruja.webp',
@@ -53,23 +69,16 @@ export default {
           technologies: ['Typescript', 'React', 'Tailwindcss']
         },
         {
-          id: 5,
+          id: 6,
           title: 'AD Investimentos',
           description: 'Professional Investment Management - Office linked to Guide Investimentos.',
           imageUrl: '/ad.png',
           link: 'https://adinvestimentos.netlify.app/',
           technologies: ['React', 'Tailwindcss', 'Javascript']
         },
+
         {
-          id: 3,
-          title: 'KaniCasino',
-          description: "Kanicasino is a 4fun casino, no real money involved (unless...?). You can open cases in a CSGO-like style, play roulette, coinflip, and more. I've been working on this project for months now, and it's my favorite one",
-          imageUrl: '/kanicasino.webp',
-          link: 'https://kanicasino.novadrake.com',
-          technologies: ['Node', 'Typescript', 'React', 'Tailwindcss']
-        },
-        {
-          id: 4,
+          id: 7,
           title: 'Novaskins',
           description: 'Track skins information directly from the CS:GO market. Verify the price, volume, median price and lowest price of a skin, and make sure if it worth your money. - [Out because of Heroku prices]',
           imageUrl: '/novaskins.webp',
@@ -92,7 +101,11 @@ export default {
         'PHP',
         'Javascript',
         'Git',
-        'Typescript',],
+        'Typescript',
+        'Node',
+        'Python',
+        'MongoDB',
+      ],
       skillsList: [
         {
           link: "https://reactjs.org",

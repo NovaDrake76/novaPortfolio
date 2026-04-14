@@ -10,6 +10,7 @@
   "dependencies": {
     "@vueuse/motion": "^2.0.0-beta.12",
     "vue": "^3.2.31",
+    "vue-router": "^4.6.4",
     "wordsphere": "^1.1.2"
   },
   "devDependencies": {

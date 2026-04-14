@@ -3,6 +3,19 @@
     <div class="card">
       <h1><i class="fab fa-youtube"></i> YT Downloader</h1>
 
+      <div class="instance-group">
+        <label><i class="fas fa-server"></i> Instância</label>
+        <select v-model="instanceUrl">
+          <option
+            v-for="inst in instances"
+            :key="inst.url"
+            :value="inst.url"
+          >
+            {{ inst.name }}
+          </option>
+        </select>
+      </div>
+
       <div class="input-group">
         <input
           v-model="url"
@@ -63,7 +76,21 @@
 export default {
   name: "YtDownloader",
   data() {
+    const instances = [
+      { name: "cobalt-api.meowing.de", url: "https://cobalt-api.meowing.de" },
+      { name: "cobalt-backend.canine.tools", url: "https://cobalt-backend.canine.tools" },
+      { name: "kityune.imput.net", url: "https://kityune.imput.net" },
+      { name: "nachos.imput.net", url: "https://nachos.imput.net" },
+      { name: "downloadapi.stuff.solutions", url: "https://downloadapi.stuff.solutions" },
+    ];
+    const saved = localStorage.getItem("cobalt-instance");
+    const defaultUrl = instances.some((i) => i.url === saved)
+      ? saved
+      : instances[0].url;
+
     return {
+      instances,
+      instanceUrl: defaultUrl,
       url: "",
       format: "video",
       quality: "1080p",
@@ -73,20 +100,19 @@ export default {
       downloadUrl: "",
     };
   },
+  watch: {
+    instanceUrl(val) {
+      localStorage.setItem("cobalt-instance", val);
+    },
+  },
   methods: {
     async download() {
       if (!this.url) return;
 
+      const apiBase = this.instanceUrl.replace(/\/+$/, "");
       this.loading = true;
       this.error = "";
       this.downloadUrl = "";
-
-      const qualityMap = {
-        "360p": "360",
-        "480p": "480",
-        "720p": "720",
-        "1080p": "1080",
-      };
 
       const body = {
         url: this.url,
@@ -94,11 +120,11 @@ export default {
       };
 
       if (this.format === "video") {
-        body.videoQuality = qualityMap[this.quality];
+        body.videoQuality = this.quality.replace("p", "");
       }
 
       try {
-        const res = await fetch("https://api.cobalt.tools", {
+        const res = await fetch(apiBase, {
           method: "POST",
           headers: {
             "Accept": "application/json",
@@ -109,15 +135,19 @@ export default {
 
         const data = await res.json();
 
-        if (data.url) {
+        if (data.status === "tunnel" || data.status === "redirect") {
           this.downloadUrl = data.url;
-        } else if (data.error) {
-          this.error = data.error;
+        } else if (data.status === "picker" && data.picker && data.picker.length) {
+          this.downloadUrl = data.picker[0].url;
+        } else if (data.status === "error") {
+          this.error = data.error?.code || "Erro desconhecido do servidor.";
+        } else if (data.url) {
+          this.downloadUrl = data.url;
         } else {
           this.error = "Resposta inesperada do servidor.";
         }
       } catch (err) {
-        this.error = "Falha na conexão com o servidor. Tente novamente.";
+        this.error = "Falha na conexão. Tente outra instância.";
       } finally {
         this.loading = false;
       }
@@ -156,6 +186,42 @@ h1 {
 
 h1 i {
   color: #62f9d6;
+}
+
+.instance-group {
+  margin-bottom: 16px;
+}
+
+.instance-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #8892b0;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.instance-group select {
+  width: 100%;
+  padding: 10px 12px;
+  background: #0a192f;
+  border: 1px solid #233554;
+  border-radius: 8px;
+  color: #ccd6f6;
+  font-size: 0.9rem;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.instance-group select:focus {
+  border-color: #62f9d6;
+}
+
+.instance-group select option {
+  background: #0a192f;
+  color: #ccd6f6;
 }
 
 .input-group input {
